@@ -1,4 +1,4 @@
-package aqsa.onebyte.com.onebyteinterview.View;
+package aqsa.onebyte.com.onebyteinterview.login.View;
 
 /**
  * Created by AQSA SHaaPARR on 1/10/2018.

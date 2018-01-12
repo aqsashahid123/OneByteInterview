@@ -2,10 +2,12 @@ package aqsa.onebyte.com.onebyteinterview;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import aqsa.onebyte.com.onebyteinterview.Presenter.IPresenter;
+import aqsa.onebyte.com.onebyteinterview.login.Presenter.IPresenter;
+import aqsa.onebyte.com.onebyteinterview.login.Presenter.PresenterCompl;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -20,9 +22,14 @@ public class MainActivity extends AppCompatActivity {
         etEmail = (EditText) findViewById(R.id.etEmail);
         etPassword = (EditText) findViewById(R.id.etPassword);
         btnLogin = (Button) findViewById(R.id.btnLogin);
+        presenter = new PresenterCompl(MainActivity.this) ;
 
-
-
+        btnLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                presenter.doLogin(etEmail.getText().toString(),etPassword.getText().toString());
+            }
+        });
 
 
     }

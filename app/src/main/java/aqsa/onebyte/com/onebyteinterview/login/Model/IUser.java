@@ -1,4 +1,4 @@
-package aqsa.onebyte.com.onebyteinterview.Model;
+package aqsa.onebyte.com.onebyteinterview.login.Model;
 
 /**
  * Created by AQSA SHaaPARR on 1/10/2018.
@@ -6,8 +6,9 @@ package aqsa.onebyte.com.onebyteinterview.Model;
 
 public interface IUser {
 
-    String getUserName();
+    String getEmail();
     String getPassword();
+    String getId();
     int checkUserValidity(String userName,String password);
 
 }
